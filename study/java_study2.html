@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>(JAVA)2. 자바 데이터 변수&amp;타입 그리고 배열 | Jiniworks Knowledge Base</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="JiniWorks Dev.">
+    <meta name="robots" content="noindex">
+    <link rel="preload" href="/assets/css/0.styles.44fe5b27.css" as="style"><link rel="preload" href="/assets/js/app.65a287af.js" as="script"><link rel="preload" href="/assets/js/2.111a4501.js" as="script"><link rel="preload" href="/assets/js/17.ce95e47e.js" as="script"><link rel="prefetch" href="/assets/js/10.0ad79967.js"><link rel="prefetch" href="/assets/js/11.89901c01.js"><link rel="prefetch" href="/assets/js/12.0215382e.js"><link rel="prefetch" href="/assets/js/13.02a3d9a4.js"><link rel="prefetch" href="/assets/js/14.3b4f13aa.js"><link rel="prefetch" href="/assets/js/15.d1739417.js"><link rel="prefetch" href="/assets/js/16.9620fdd6.js"><link rel="prefetch" href="/assets/js/18.bbcd404d.js"><link rel="prefetch" href="/assets/js/19.e549a00f.js"><link rel="prefetch" href="/assets/js/3.989737ef.js"><link rel="prefetch" href="/assets/js/4.38c01414.js"><link rel="prefetch" href="/assets/js/5.61f8d686.js"><link rel="prefetch" href="/assets/js/6.4db2969a.js"><link rel="prefetch" href="/assets/js/7.ae5c14d4.js"><link rel="prefetch" href="/assets/js/8.f6babcac.js"><link rel="prefetch" href="/assets/js/9.0fecb39f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44fe5b27.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Jiniworks Knowledge Base</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>(JAVA)2. 자바 데이터 변수&amp;타입 그리고 배열</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/study/java_study2.html#_1-프리미티브-타입과-레퍼런스-타입" class="sidebar-link">1. 프리미티브 타입과 레퍼런스 타입</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/study/java_study2.html#_2-변수-선언-및-초기화하는-방법" class="sidebar-link">2. 변수 선언 및 초기화하는 방법</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/java_study2.html#_2-1-변수의-초기화-방법" class="sidebar-link">2.1 변수의 초기화 방법</a></li><li class="sidebar-sub-header"><a href="/study/java_study2.html#_2-1-2-생성자-constructor" class="sidebar-link">2.1.2 생성자( Constructor )</a></li><li class="sidebar-sub-header"><a href="/study/java_study2.html#_2-1-2-1-기본-생성자-default-constructor" class="sidebar-link">2.1.2.1 기본 생성자( Default Constructor )</a></li><li class="sidebar-sub-header"><a href="/study/java_study2.html#_2-1-3-초기화-블럭" class="sidebar-link">2.1.3. 초기화 블럭</a></li></ul></li><li><a href="/study/java_study2.html#_3-1차원-2차원-배열-선언하기" class="sidebar-link">3. 1차원/2차원 배열 선언하기</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/study/java_study2.html#_4-변수의-스코프-scope-와-라이프-타임" class="sidebar-link">4. 변수의 스코프(scope)와 라이프 타임</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/java_study2.html#_4-1-라이프-타임" class="sidebar-link">4.1 라이프 타임</a></li></ul></li><li><a href="/study/java_study2.html#_5-타입변환-type-conversion" class="sidebar-link">5. 타입변환 ( type conversion )</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/study/java_study2.html#_1-묵시적-타입변환-자동-타입-변환-promotion" class="sidebar-link">1. 묵시적 타입변환(자동 타입 변환 - Promotion )</a></li><li class="sidebar-sub-header"><a href="/study/java_study2.html#_2-명시적-타입변환-강제-타입-변환-casting" class="sidebar-link">2. 명시적 타입변환(강제 타입 변환 - Casting )</a></li></ul></li><li><a href="/study/java_study2.html#_6-타입추론" class="sidebar-link">6. 타입추론</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="java-2-자바-데이터-변수-타입-그리고-배열"><a href="#java-2-자바-데이터-변수-타입-그리고-배열" class="header-anchor">#</a> (JAVA)2. 자바 데이터 변수&amp;타입 그리고 배열</h1> <h3 id="목표"><a href="#목표" class="header-anchor">#</a> 목표</h3> <ul><li>자바 프리미티브 타입, 변수 그리고 배열을 사용하는 방법을 익힙니다.</li></ul> <h3 id="학습할-것"><a href="#학습할-것" class="header-anchor">#</a> 학습할 것</h3> <ul><li>프리미티브  타입  종류와  값의  범위  그리고  기본  값</li> <li>프리미티브  타입과  레퍼런스  타입</li> <li>리터럴</li> <li>변수  선언  및  초기화하는  방법</li> <li>변수의  스코프와  라이프타임</li> <li>타입  변환, 캐스팅  그리고  타입  프로모션</li> <li>1차  및 2차  배열  선언하기</li> <li>타입  추론, var</li></ul> <hr> <h2 id="_1-프리미티브-타입과-레퍼런스-타입"><a href="#_1-프리미티브-타입과-레퍼런스-타입" class="header-anchor">#</a> 1. 프리미티브 타입과 레퍼런스 타입</h2> <p>자바의 데이터 타입은 크게 프리미티브 타입과 레퍼런스 타입으로 나눠집니다.</p> <p>이 두개 타입의 가장 큰 차이점은 간단하게 &quot;메모리 참조 타입인지?&quot; 입니다. ( C 언어의 포인터 개념 )</p> <p><img src="/study2-1.png" alt="Alt text"></p> <ol><li>프리미티브 타입 ( Primitive type )</li></ol> <p>- 8가지의 타입을 미리 정의하여 제공</p> <p>- 기본값이 있기 때문에 Null이 존재하지 않는다. 만약 Null 을 넣고 싶다면 래퍼 클래스를 활용한다.</p> <p>- 실제 값을 저장하는 공간으로 스택메모리에 저장된다.</p> <p>- 컴파일 시점에 표현 범위를 벗어난 값이 있을 경우 에러를 발생시키는 컴파일 에러가 발생</p> <table border="1" style="border-collapse:collapse;width:100%;height:100%;"><tbody><tr style="height:19px;"><td style="width:20%;height:19px;"> </td><td style="width:11.9767%;height:19px;text-align:center;"><b>타입</b></td><td style="width:15%;height:19px;text-align:center;"><b>할당 메모리 크기</b></td><td style="width:13.4884%;height:19px;text-align:center;"><b>기본값</b></td><td style="width:39.5349%;height:19px;text-align:center;"><b>표현 범위 </b></td></tr><tr style="height:19px;"><td style="width:20%;height:19px;text-align:center;"><b>논리형</b></td><td style="width:11.9767%;height:19px;">boolean</td><td style="width:15%;height:19px;">1 byte</td><td style="width:13.4884%;height:19px;">false</td><td style="width:39.5349%;height:19px;"><span style="color:#333333;">true, false</span></td></tr><tr style="height:19px;"><td rowspan="4" style="width:20%;height:19px;text-align:center;"><b>정수형</b></td><td style="width:11.9767%;height:19px;">byte</td><td style="width:15%;height:19px;"><span style="color:#333333;">1 byte</span></td><td style="width:13.4884%;height:19px;">0</td><td style="width:39.5349%;height:19px;"><span style="color:#333333;">-128 ~ 127</span></td></tr><tr style="height:19px;"><td style="width:11.9767%;height:19px;">short</td><td style="width:15%;height:19px;"><span style="color:#333333;">2 byte</span></td><td style="width:13.4884%;height:19px;">0</td><td style="width:39.5349%;height:19px;"><span style="color:#333333;">-32,768 ~ 32,767</span></td></tr><tr style="height:19px;"><td style="width:11.9767%;height:19px;"><b>int<br>(기본)</b></td><td style="width:15%;height:19px;"><span style="color:#333333;">4 byte</span></td><td style="width:13.4884%;height:19px;">0</td><td style="width:39.5349%;height:19px;"><span style="color:#333333;"> </span><span style="color:#333333;">-2,147,483,648 ~ 2,147,483,647</span></td></tr><tr style="height:19px;"><td style="width:11.9767%;height:19px;">long</td><td style="width:15%;height:19px;"><span style="color:#333333;">8 byte</span></td><td style="width:13.4884%;height:19px;">0L</td><td style="width:39.5349%;height:19px;"><span style="color:#333333;">-9,223,372,036,854,775,808</span><span style="color:#333333;"> ~ <br>9,223,372,036,854,775,807</span></td></tr><tr style="height:19px;"><td rowspan="2" style="width:20%;height:19px;text-align:center;"><b>실수형</b></td><td style="width:11.9767%;height:19px;">float</td><td style="width:15%;height:19px;"><span style="color:#333333;">4 byte</span></td><td style="width:13.4884%;height:19px;">0.0F</td><td style="width:39.5349%;height:19px;"><span style="color:#333333;">(3.4 X 10</span><span>-38</span><span>) ~ (3.4 X 10</span><span>38</span><span>) 의 근사값</span></td></tr><tr style="height:19px;"><td style="width:11.9767%;height:19px;"><b>double<br>(기본)</b></td><td style="width:15%;height:19px;"><span style="color:#333333;">8 byte</span></td><td style="width:13.4884%;height:19px;">0.0</td><td style="width:39.5349%;height:19px;"><span style="color:#333333;">(1.7 X 10</span><span>-308</span><span>) ~ (1.7 X 10</span><span>308</span><span>) 의 근사값</span></td></tr><tr style="height:19px;"><td style="width:20%;height:19px;text-align:center;"><b>문자형</b></td><td style="width:11.9767%;height:19px;">char</td><td style="width:15%;height:19px;"><span style="color:#333333;">2 byte(유니코드)</span></td><td style="width:13.4884%;height:19px;"><span style="color:#333333;"> </span><span style="color:#333333;">'\u0000' </span></td><td style="width:39.5349%;height:19px;"><span style="color:#333333;"> 0 ~ 65,535</span></td></tr></tbody></table> <ol start="2"><li>래퍼런스 타입 ( Reference type )</li></ol> <p>- 프리미티브 타입을 제외한 타입들이 모두 래퍼런스 타입</p> <p>- 빈 객체를 의미하는 Null 이 존재</p> <p>- 값이 저장되어 있는 곳의 주소값을 저장하는 공간으로  Heap 메모리에 저장</p> <table border="1" style="border-collapse:collapse;width:100%;height:100%;"><tbody><tr style="height:19px;"><td style="width:25%;text-align:center;height:19px;"><b>타입</b></td><td style="width:25%;text-align:center;height:19px;"><b>기본값</b></td><td style="width:25%;text-align:center;height:19px;"><b>할당 메모리 크기</b></td></tr><tr style="height:19px;"><td style="width:25%;height:19px;">배열(Array)</td><td style="width:25%;height:19px;text-align:center;">Null</td><td rowspan="4" style="width:25%;height:19px;">4 byte ( 객체의 주소값 )</td></tr><tr style="height:19px;"><td style="width:25%;height:19px;">열거(Enumeration)</td><td style="width:25%;height:19px;text-align:center;"><span style="color:#333333;">Null</span></td></tr><tr style="height:19px;"><td style="width:25%;height:19px;">클래스(Class)</td><td style="width:25%;height:19px;text-align:center;"><span style="color:#333333;">Null</span></td></tr><tr style="height:19px;"><td style="width:25%;height:19px;">인터페이스(Interface)</td><td style="width:25%;height:19px;text-align:center;"><span style="color:#333333;">Null</span></td></tr></tbody></table> <h2 id="_2-변수-선언-및-초기화하는-방법"><a href="#_2-변수-선언-및-초기화하는-방법" class="header-anchor">#</a> 2. 변수 선언 및 초기화하는 방법</h2> <p>변수의 초기화 : 변수를 선언한 후 처음으로 값을 저장하는 것</p> <div class="language- extra-class"><pre class="language-text"><code>int a = 1;
+</code></pre></div><p>a 는 변수이고, 여기서의 1은 리터럴(literal)이다.</p> <p>즉, 1과 같이 변하지 않는 데이터( boolean,char,double,long,int,etc.. )를 리터널이라 부른다.</p> <h3 id="_2-1-변수의-초기화-방법"><a href="#_2-1-변수의-초기화-방법" class="header-anchor">#</a> 2.1 변수의 초기화 방법</h3> <p>인스턴스 변수는 초기화 하지 않아도 데이터 타입에 맞게 기본값으로 초기화가 되지만 지역변수는 사용하기 전에 꼭 초기화를 시켜줘야 한다.   가능하다면 변수 선언과 동시에 초기화 시켜주는 버릇을 들이는것이 바람직하다.</p> <p>2.1.1 명시적 초기화</p> <p>- 변수 선언과 동시에 초기화하는것. 가장 기본적이면서도 간단한 초기화 방법</p> <div class="language- extra-class"><pre class="language-text"><code>Class Pizza{
+    	private double sales = 0.0; // primitive type 클래스 변수의 초기화 
+	private int dough = 1;  // primitive type 인스턴스 변수의 초기화 
+	Topping topping = new Topping();  // reference type 변수의 초기화
+}
+</code></pre></div><h3 id="_2-1-2-생성자-constructor"><a href="#_2-1-2-생성자-constructor" class="header-anchor">#</a> 2.1.2 생성자( Constructor )</h3> <p>자바에서는 객체의 생성과 동시에 인스턴스 변수를 원하는 값으로 초기화할 수 있는 생성자라는 메소드를 제공.</p> <p>생성자의 이름은 해당 클래스의 이름과 같아야 한다.</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>new 키워드를 사용하여 객체를 생성할 때 자동으로 생성자가 호출됩니다.</p></div> <p>&lt; 특징 &gt;</p> <ol><li><p>생성자는 반환값이 없지만, 반환 타입을 void 형으로 선언하지 않는다.</p></li> <li><p>생성자는 초기화를 위한 데이터를 인수로 전달받을 수 있다.</p></li> <li><p>여러 개의 생성자를 가질 수 있다. ( 메소드 오버로딩이 가능 )</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>Class Pizza{
+    private double sales = 0.0; // primitive type 클래스 변수의 초기화 
+    private int dough = 1;  // primitive type 인스턴스 변수의 초기화 
+	
+    public Pizza() {} // 매개변수가 없는 생성자
+    public Pizza(int dough ) { // 매개변수가 있는 생성자
+    	this.dough = dough;
+    }
+}
+</code></pre></div><h3 id="_2-1-2-1-기본-생성자-default-constructor"><a href="#_2-1-2-1-기본-생성자-default-constructor" class="header-anchor">#</a> 2.1.2.1 기본 생성자( Default Constructor )</h3> <p>자바 컴파일러는 기본생성자를 기본적으로 제공 한다.  ( Pizza() { } )</p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>매개변수를 가지는 생성자를 하나라도 정의 했다면, 기본 생성자는 자동으로 추가되지 않으므로 매개 변수를 가지는 생성자를 정의 한 후 기본 생성자를 호출하면 오류가 발생한다.</p></div> <h3 id="_2-1-3-초기화-블럭"><a href="#_2-1-3-초기화-블럭" class="header-anchor">#</a> 2.1.3. 초기화 블럭</h3> <p>명시적 초기화 만으로 부족한 경우에 사용한다. 명시적 초기화에서 사용할 수 없는 조건문,반복문,배열,예외처리 등의 명령문을 통해 복잡한 초기화가 가능하다. 초기화 블럭은 클래스 초기화 블럭과 인스턴스 초기화 블럭으로 나뉜다.</p> <div class="language- extra-class"><pre class="language-text"><code>Class Pizza{
+	
+    static double sales ;
+    private int dough = 1;  // primitive type 변수의 초기화 
+    
+    
+    static{
+    	// 클래스 초기화 블럭
+        sales = 0.0;
+    } 
+    
+    {  
+    	// 인스턴스 초기화 블럭
+        this.dough = 4;
+    } 
+    
+	
+}
+</code></pre></div><p>1) 클래스 초기화 블럭 : 클래스 변수 초기화에 사용 ( 기본값 -&gt; 명시적 초기화 -&gt; 클래스 초기화 블록 순 )</p> <p>2) 인스턴스 초기화 블럭   ( 기본값 -&gt; 명시적 초기화 -&gt; 인스턴스 초기화 블록 -&gt; 생성자 )</p> <p>- 인스턴스 변수 초기화에 사용 ( * 생성자 보다 인스턴스 초기화 블럭이 먼저 수행 )</p> <ul><li>단순히 중괄호({ })만을 사용하여 정의할 수 있다.</li></ul> <p>인스턴스 변수의 초기화는 주로 생성성자를 사용하기 때문에 잘 사용되지 않는다. 대신 클래스의 모든 생성자에서 공통으로 수행되어야 하는 코드가 있는 경우 인스턴스 초기화 블럭에 작성하면 코드의 중복을 줄일 수 있다.</p> <div class="language- extra-class"><pre class="language-text"><code>Class Pizza{
+	
+    private int dough;  // primitive type 변수의 초기화
+    
+	static{ } // 클래스 초기화 블럭
+        
+    	{ System.out.println(&quot; Pizza 인스턴스 생성 &quot;); } // 인스턴스 초기화 블럭
+	
+	
+	
+	public Pizza() {
+		this.dough = 1;  // 생성자에서 초기화
+		//System.out.println(&quot; Pizza 인스턴스 생성 &quot;); 
+	}
+	
+	public Pizza(int dough ) {
+		this.dough = dough; 
+		//System.out.println(&quot; Pizza 인스턴스 생성 &quot;);
+	}
+    
+}
+</code></pre></div><h2 id="_3-1차원-2차원-배열-선언하기"><a href="#_3-1차원-2차원-배열-선언하기" class="header-anchor">#</a> 3. 1차원/2차원 배열 선언하기</h2> <p>배열(array)이란 같은 타입의 변수들로 이루어진 유한 집합으로, 배열을 구성하는 각각의 값을 배열 요소(element)라고 하며 배열의 위치를 가리키는 숫자를 인덱스(index)라고 한다. ( 인덱스는 언제나 0부터 시작하고 0을 포함한 양의 정수만 가질 수 있다. )</p> <div class="language- extra-class"><pre class="language-text"><code>// 1차원 배열 
+int[] array = new int[10]; // 길이가 10인 int 형 배열 선언 및 생성
+
+// 2차원 배열
+int[][] array2 = new int[2][3]; 
+
+// 2차원 배열 선언과 동시에 초기화 하는 방법 
+int[][] array3 = {
+    {10,20,30},
+    {40,50,60}
+};
+</code></pre></div><p>2차원 배열이란 배열의 요소로 1차원 배열을 가지는 배열이다.(  2차원 배열을 나타내는 타입은 따로 없다. )</p> <p><img src="/study2-2.png" alt="Alt text"></p> <h2 id="_4-변수의-스코프-scope-와-라이프-타임"><a href="#_4-변수의-스코프-scope-와-라이프-타임" class="header-anchor">#</a> 4. 변수의 스코프(scope)와 라이프 타임</h2> <p>스코프(scope)란 변수를 사용할 수 있는 범위를 뜻한다. { } 안에서 변수를 선언했을 경우 영역이 끝나기 전까지는 어디서든 사용이 가능하다.</p> <p>변수는 선언 위치에 따라 '전역변수'와 '지역변수' 로 나눠진다.</p> <div class="language- extra-class"><pre class="language-text"><code>class Pizza{
+
+    int dough; // 전역변수(객체변수) : 현재 클래스내 어디든 호출이 가능
+    static int sales; // 전역변수(클래스변수) : 다른 클래스에서도 호출이 가능 
+    
+    void Add(){
+    	int dough = 3; // Add 메소드의 지역변수 
+    }
+}
+</code></pre></div><h3 id="_4-1-라이프-타임"><a href="#_4-1-라이프-타임" class="header-anchor">#</a> 4.1 라이프 타임</h3> <p>1) 전역변수</p> <ul><li><p>클래스변수 : 프로그램이 실행될 때 클래스와 함께 메모리에 로드되는 변수로 프로그램 종료시 삭제 된다.</p></li> <li><p>인스턴스 변수 : 객체를 생성함에 따라 각각의 인스턴스마다 변수의 복사본을 가질 수 있는 변수이며, 객체가 소멸되기 전까지 존재.</p></li></ul> <p>2) 지역변수</p> <ul><li>메소드,반복문,생성자 등에서 선언된 변수로 해당 영역 내에서만 사용이 가능하고 해당 범위를 벗어날 경우 삭제된다.</li></ul> <h2 id="_5-타입변환-type-conversion"><a href="#_5-타입변환-type-conversion" class="header-anchor">#</a> 5. 타입변환 ( type conversion )</h2> <p>하나의 타입을 다른 타입으로 바꾸는 것을 타입 변환이라고 한다. 자바에서는 boolean 형을 제외한 나머지 기본 타입 간의 타입 변환을 자유롭게 할 수 있다.</p> <p>다른 타입끼리의 연산은 피연산자들을 모두 같은 타입으로 만든 후에 수행되는데, 메모리에서 할당받은 바이트의 크기가 상대적으로 작은 타입에서 큰 타입으로의 타입변환은 생략할 수 있다. 하지만, 메모리에 할당받은 바이트의 크기가 큰 타입에서 작은 타입으로의 타입 변환은 데이터의 손실이 발생하므로 상대적으로 크기가 작은 타입으로 타입변환을 할 경우 컴파일 오류가 발생한다.</p> <h3 id="_1-묵시적-타입변환-자동-타입-변환-promotion"><a href="#_1-묵시적-타입변환-자동-타입-변환-promotion" class="header-anchor">#</a> 1. 묵시적 타입변환(자동 타입 변환 - Promotion )</h3> <p>대입 연산이나 산술 연사에서 컴파일러가 자동으로 수행해주는 타입 변환이다. 자바에서는 데이터 손실이 발생하지 않거나, 데이터의 손실이 최소화되는 방향으로 무시적 타입 변환을 진행한다. 데이터의 손실이 발생하는 대입 연산은 허용하지 않는다.</p> <p>자동으로 수행하는 타입 변환은 언제나 데이터의 손실이 최소화되는 방향으로 이루어진다.</p> <p>byte -&gt; short  -&gt; int -&gt; long -&gt; float -&gt; double<br>
+              char</p> <h3 id="_2-명시적-타입변환-강제-타입-변환-casting"><a href="#_2-명시적-타입변환-강제-타입-변환-casting" class="header-anchor">#</a> 2. 명시적 타입변환(강제 타입 변환 - Casting )</h3> <p>사용자가 타입 캐스트 연산자를 사용하여 강제적으로 수행하는 타입 변환이다.</p> <div class="language- extra-class"><pre class="language-text"><code>int num1, num2 = 4;
+
+double result = num1 / num2;
+double result2 = (double)num1 / num2;
+
+// 결과는??
+System.out.println(result);
+System.out.println(result2);
+</code></pre></div><h2 id="_6-타입추론"><a href="#_6-타입추론" class="header-anchor">#</a> 6. 타입추론</h2> <p>타입추론이란 코드 작성 다시 타입이 정해지지 않았지만, 컴파일러가 그 타입을 유추하는 것이다.</p> <p>Java 10 부터 타입추론을 지원하는 var 키워드가 추가되었다.</p> <p>이 키워드는 local variable 이면서 선언과 동시에 initalizer 가 필수적으로 요구된다.</p> <p>(자세한 내용 : <a href="https://www.baeldung.com/java-10-local-variable-type-inference" target="_blank" rel="noopener noreferrer">https://www.baeldung.com/java-10-local-variable-type-inference<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> )</p> <div class="language- extra-class"><pre class="language-text"><code>String message = &quot;Good Bye, Java 9&quot;;
+
+// In Java 10 
+@Test
+public void whenVarInitWithString_thenGetStringTypeVar() {
+    var message = &quot;Hello, Java 10&quot;;
+    assertTrue(message instanceof String);
+}
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>자바7 에서 다이아몬드 연산자라는 방식이 추가되었는데, 자바10에서 나온 var 와 함께 사용하면 컴파일 에러가 발생한다.</p></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.65a287af.js" defer></script><script src="/assets/js/2.111a4501.js" defer></script><script src="/assets/js/17.ce95e47e.js" defer></script>
+  </body>
+</html>

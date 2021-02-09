@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>[Oracle] 프로시저 커서(CURSOR) 쿼리 확인 | Jiniworks Knowledge Base</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="JiniWorks Dev.">
+    <meta name="robots" content="noindex">
+    <link rel="preload" href="/assets/css/0.styles.44fe5b27.css" as="style"><link rel="preload" href="/assets/js/app.65a287af.js" as="script"><link rel="preload" href="/assets/js/2.111a4501.js" as="script"><link rel="preload" href="/assets/js/14.3b4f13aa.js" as="script"><link rel="prefetch" href="/assets/js/10.0ad79967.js"><link rel="prefetch" href="/assets/js/11.89901c01.js"><link rel="prefetch" href="/assets/js/12.0215382e.js"><link rel="prefetch" href="/assets/js/13.02a3d9a4.js"><link rel="prefetch" href="/assets/js/15.d1739417.js"><link rel="prefetch" href="/assets/js/16.9620fdd6.js"><link rel="prefetch" href="/assets/js/17.ce95e47e.js"><link rel="prefetch" href="/assets/js/18.bbcd404d.js"><link rel="prefetch" href="/assets/js/19.e549a00f.js"><link rel="prefetch" href="/assets/js/3.989737ef.js"><link rel="prefetch" href="/assets/js/4.38c01414.js"><link rel="prefetch" href="/assets/js/5.61f8d686.js"><link rel="prefetch" href="/assets/js/6.4db2969a.js"><link rel="prefetch" href="/assets/js/7.ae5c14d4.js"><link rel="prefetch" href="/assets/js/8.f6babcac.js"><link rel="prefetch" href="/assets/js/9.0fecb39f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44fe5b27.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Jiniworks Knowledge Base</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>[Oracle] 프로시저 커서(CURSOR) 쿼리 확인</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/oracle-cursor.html#커서-cursor" class="sidebar-link">커서 ( Cursor)</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/oracle-cursor.html#sample-java" class="sidebar-link">Sample(Java)</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/oracle-cursor.html#sample-xml" class="sidebar-link">Sample(Xml)</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="oracle-프로시저-커서-cursor-쿼리-확인"><a href="#oracle-프로시저-커서-cursor-쿼리-확인" class="header-anchor">#</a> [Oracle] 프로시저 커서(CURSOR) 쿼리 확인</h1> <blockquote><p>Oracle 프로시저 커서를 출력하기 위한 Mybatis xml 설정과 쿼리 호출 샘플</p></blockquote> <h2 id="커서-cursor"><a href="#커서-cursor" class="header-anchor">#</a> 커서 ( Cursor)</h2> <ul><li>SQL 커서는 Oracle 서버에서 할당한 전용 메모리 영역에 대한 포인터.</li> <li>질의의 결과로 얻어진 여러 행이 저장된 메모리상의 위치.</li> <li>SELECT 문의 결과 집할을 처리하는데 사용</li></ul> <h2 id="sample-java"><a href="#sample-java" class="header-anchor">#</a> Sample(Java)</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>Map param <span class="token operator">=</span> new HashMap<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+param.put<span class="token punctuation">(</span><span class="token string">&quot;param1&quot;</span>, param1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+param.put<span class="token punctuation">(</span><span class="token string">&quot;resultList&quot;</span> , <span class="token string">&quot;&quot;</span>	<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		
+oracleViewAppMapper.selectList<span class="token punctuation">(</span><span class="token string">&quot;jw.newsCenter.selectNewsCenterData&quot;</span>, param<span class="token punctuation">)</span><span class="token punctuation">;</span>	
+model.addAttribute<span class="token punctuation">(</span><span class="token string">&quot;articleList&quot;</span>, param<span class="token punctuation">)</span><span class="token punctuation">;</span>  // param에 결과값이 담긴다.
+</code></pre></div><h2 id="sample-xml"><a href="#sample-xml" class="header-anchor">#</a> Sample(Xml)</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>mode=OUT 에 선언된 resultName 을 Key 로하여 전달된 파라미터에 결과값이 담긴다.</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token operator">&lt;</span>resultMap <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;newsCenterMap&quot;</span> <span class="token assign-left variable">type</span><span class="token operator">=</span><span class="token string">&quot;CamelMap&quot;</span> /<span class="token operator">&gt;</span>
+	
+	<span class="token operator">&lt;</span>select <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token string">&quot;selectNewsCenterData&quot;</span> <span class="token assign-left variable">statementType</span><span class="token operator">=</span><span class="token string">&quot;CALLABLE&quot;</span> <span class="token assign-left variable">parameterType</span><span class="token operator">=</span><span class="token string">&quot;CamelMap&quot;</span><span class="token operator">&gt;</span>
+	<span class="token punctuation">{</span> CALL pkg_tis_portlet.sp_get_notice_info_now<span class="token punctuation">(</span>
+	    <span class="token comment">#{param1 , mode=IN},</span>
+	    <span class="token comment">#{resultList, mode=OUT, jdbcType=CURSOR, javaType=ResultSet, resultMap=newsCenterMap} </span>
+	    <span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>/select<span class="token operator">&gt;</span>
+</code></pre></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.65a287af.js" defer></script><script src="/assets/js/2.111a4501.js" defer></script><script src="/assets/js/14.3b4f13aa.js" defer></script>
+  </body>
+</html>

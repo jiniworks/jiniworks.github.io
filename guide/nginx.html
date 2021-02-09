@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>[CentOS7] nginx 설치하기 | Jiniworks Knowledge Base</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="JiniWorks Dev.">
+    <meta name="robots" content="noindex">
+    <link rel="preload" href="/assets/css/0.styles.44fe5b27.css" as="style"><link rel="preload" href="/assets/js/app.65a287af.js" as="script"><link rel="preload" href="/assets/js/2.111a4501.js" as="script"><link rel="preload" href="/assets/js/13.02a3d9a4.js" as="script"><link rel="prefetch" href="/assets/js/10.0ad79967.js"><link rel="prefetch" href="/assets/js/11.89901c01.js"><link rel="prefetch" href="/assets/js/12.0215382e.js"><link rel="prefetch" href="/assets/js/14.3b4f13aa.js"><link rel="prefetch" href="/assets/js/15.d1739417.js"><link rel="prefetch" href="/assets/js/16.9620fdd6.js"><link rel="prefetch" href="/assets/js/17.ce95e47e.js"><link rel="prefetch" href="/assets/js/18.bbcd404d.js"><link rel="prefetch" href="/assets/js/19.e549a00f.js"><link rel="prefetch" href="/assets/js/3.989737ef.js"><link rel="prefetch" href="/assets/js/4.38c01414.js"><link rel="prefetch" href="/assets/js/5.61f8d686.js"><link rel="prefetch" href="/assets/js/6.4db2969a.js"><link rel="prefetch" href="/assets/js/7.ae5c14d4.js"><link rel="prefetch" href="/assets/js/8.f6babcac.js"><link rel="prefetch" href="/assets/js/9.0fecb39f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44fe5b27.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Jiniworks Knowledge Base</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>[CentOS7] nginx 설치하기</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/nginx.html#nginx-설치-확인" class="sidebar-link">nginx 설치 확인</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/nginx.html#설치" class="sidebar-link">설치</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/nginx.html#_1-yum-명령어를-이용한-자동설치" class="sidebar-link">1. yum 명령어를 이용한 자동설치</a></li><li class="sidebar-sub-header"><a href="/guide/nginx.html#_2-wget-혹은-ftp을-이용한-수동-설치" class="sidebar-link">2. wget 혹은 FTP을 이용한 수동 설치</a></li></ul></li><li><a href="/guide/nginx.html#nginx-톰캣-연동" class="sidebar-link">nginx 톰캣 연동</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/nginx.html#_3-nginx-tomcat-연동" class="sidebar-link">3. nginx + Tomcat 연동</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="centos7-nginx-설치하기"><a href="#centos7-nginx-설치하기" class="header-anchor">#</a> [CentOS7] nginx 설치하기</h1> <div style="font-size:15px;text-align:right;"><span style="font-weight:bold;">작성자 : 막내뤼👍</span></div> <blockquote><p>yum명령어를 이용한 설치방법과 압축된 파일을 컴파일해 설치하는 방법을 알아보자</p></blockquote> <ul><li>yum 명령어를 이용한 자동 설치 ( <strong>root 계정</strong> )</li> <li>압축파일을 다운받아 원하는 경로에 설치 ( <strong>사용자 계정</strong> )</li></ul> <h2 id="nginx-설치-확인"><a href="#nginx-설치-확인" class="header-anchor">#</a> nginx 설치 확인</h2> <pre><code>nginx -v</code></pre> <p><strong>설치된 경우</strong></p> <blockquote><pre><code>nginx version: nginx/[해당버전]</code></pre></blockquote> <p><strong>설치가 되지 않은 경우</strong></p> <blockquote><pre><code>-bash: nginx: command not found</code></pre></blockquote> <p>설치가 되지 않은 경우 해당 게시글을 보며 nginx설치를 따라해보자.</p> <h2 id="설치"><a href="#설치" class="header-anchor">#</a> 설치</h2> <h3 id="_1-yum-명령어를-이용한-자동설치"><a href="#_1-yum-명령어를-이용한-자동설치" class="header-anchor">#</a> 1. yum 명령어를 이용한 자동설치</h3> <h4 id="_1-1-yum-저장소에-nginx-추가"><a href="#_1-1-yum-저장소에-nginx-추가" class="header-anchor">#</a> 1.1 yum 저장소에 nginx 추가</h4> <p>nginx는 yum 저장소에 없기 때문에 파일을 추가 해야한다.</p> <pre><code>cd /etc/yum.repos.d
+
+vi nginx.repo
+</code></pre> <pre><code>[nginx]
+name=nginx repo
+baseurl=http://nginx.org/packages/centos/7/$basearch/
+gpgcheck=0
+enabled=1</code></pre> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>baseurl의 경우 해당 os와 버전에 맞춰 작성하면 된다.</p></div> <p>제대로 yum저장소에 등록이 되었는지 확인해보자.
+<pre><code>yum info nginx</code></pre>
+잘 되었는 경우 다음과 같이 나온다.
+<pre><code>Available Packages
+Name  : nginx
+Arch  : x86_64
+Epoch : 1
+Version : 1.18.0
+Release : 2.el7.ngx
+(생략)</code></pre></p> <h4 id="_1-2-nginx-설치"><a href="#_1-2-nginx-설치" class="header-anchor">#</a> 1.2 nginx 설치</h4> <pre><code>yum install -y nginx</code></pre> <ul><li>설치 경로는 /etc/nginx 이다.</li></ul> <h4 id="_1-3-nginx-실행"><a href="#_1-3-nginx-실행" class="header-anchor">#</a> 1.3 nginx 실행</h4> <pre><code>systemctl start nginx</code></pre> <h3 id="_2-wget-혹은-ftp을-이용한-수동-설치"><a href="#_2-wget-혹은-ftp을-이용한-수동-설치" class="header-anchor">#</a> 2. wget 혹은 FTP을 이용한 수동 설치</h3> <h4 id="_2-1-nginx-설치"><a href="#_2-1-nginx-설치" class="header-anchor">#</a> 2.1 nginx 설치</h4> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><a href="https://nginx.org/en/download.html">nginx 다운로드</a> <br><a href="https://zlib.net/">zlib 다운로드</a></p></div> <p>FTP 혹은 wget을 이용하여 파일을 다운로드 받는다.</p> <pre><code>wget https://nginx.org/download/nginx-1.18.0.tar.gz
+wget https://zlib.net/zlib-1.2.11.tar.gz</code></pre> <pre><code>tar -xvf nginx-1.18.0.tar.gz
+tar -xvf zlib-1.2.11.tar.gz
+cd nginx-1.18.0
+</code></pre> <pre><code>./configure --prefix=[설치경로] --with-zlib=../zlib-1.2.11
+make
+make install</code></pre> <h4 id="_2-2-nginx-실행"><a href="#_2-2-nginx-실행" class="header-anchor">#</a> 2.2 nginx 실행</h4> <pre><code>vi [설치경로]/conf/nginx.conf</code></pre> <pre><code>user  [실행할 유저];
+worker_processes  1;</code></pre> <pre><code>cd ../sbin/
+./nginx
+./nginx -s stop //종료</code></pre> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>nginx로 reverse proxy 를 사용할 때, 용량이 큰 파일을 업로드하면 &quot;413 Request Entity Too Large&quot; 라는 메시지를 볼 수 있다.
+<pre><code>vi [설치경로]/conf/nginx.conf</code></pre> <pre><code>http {
+client_max_body_size [용량];
+...
+}</code></pre>
+기본은 1M으로 무제한으로 설정하고 싶다면 0으로 설정하면 된다.</p></div> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <h4 id="_2-2-1-systemctl-등록"><a href="#_2-2-1-systemctl-등록" class="header-anchor">#</a> 2.2.1 systemctl 등록</h4> <pre><code>cd /usr/lib/systemd/system
+vi nginx.service
+</code></pre> <pre><code>[Unit]
+Description=The NGINX HTTP and reverse proxy server
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+ExecStartPre=[설치경로]/sbin/nginx -t
+ExecStart=[설치경로]/sbin/nginx
+ExecReload=[설치경로]/sbin/nginx -s reload
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target
+</code></pre> <p>systemctl  daemon을 재시작한 후 상태를 확인해준다.
+<pre><code>systemctl daemon-reload
+systemctl status nginx
+</code></pre></p></div> <h2 id="nginx-톰캣-연동"><a href="#nginx-톰캣-연동" class="header-anchor">#</a> nginx 톰캣 연동</h2> <h3 id="_3-nginx-tomcat-연동"><a href="#_3-nginx-tomcat-연동" class="header-anchor">#</a> 3. nginx + Tomcat 연동</h3> <h4 id="_3-1-nginx-설정"><a href="#_3-1-nginx-설정" class="header-anchor">#</a> 3.1 nginx 설정</h4> <pre><code>vi  [설치경로]/conf/nginx.conf
+</code></pre> <pre><code>server {
+listen 80;
+server_name localhost;
+
+#charset koi8-r;
+#access_log /var/log/nginx/host.access.log main;
+
+location / {
+root /usr/share/nginx/html;
+index index.html index.htm;
+proxy_pass http://localhost:8090;
+}
+(생략)
+</code></pre> <h4 id="_3-2-tomcat-설정"><a href="#_3-2-tomcat-설정" class="header-anchor">#</a> 3.2 tomcat 설정</h4> <p>tomcat의 server.xml에서 파일이 시작할 경로를 잡아준다.
+<pre><code>Context path=&quot;&quot; docBase=&quot;/APP/jiniworks_cms&quot; debug=&quot;0&quot; reloadable=&quot;false&quot; URIEncoding=&quot;utf-8&quot; /
+</code></pre></p> <h4 id="_3-3-서버-재시작"><a href="#_3-3-서버-재시작" class="header-anchor">#</a> 3.3 서버 재시작</h4> <pre><code>systemctl restart nginx</code></pre></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.65a287af.js" defer></script><script src="/assets/js/2.111a4501.js" defer></script><script src="/assets/js/13.02a3d9a4.js" defer></script>
+  </body>
+</html>

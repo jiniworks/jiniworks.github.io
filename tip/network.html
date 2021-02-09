@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>내부망에 연결된 PC에서 외부망 연결 | Jiniworks Knowledge Base</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="JiniWorks Dev.">
+    <meta name="robots" content="noindex">
+    <link rel="preload" href="/assets/css/0.styles.44fe5b27.css" as="style"><link rel="preload" href="/assets/js/app.65a287af.js" as="script"><link rel="preload" href="/assets/js/2.111a4501.js" as="script"><link rel="preload" href="/assets/js/18.bbcd404d.js" as="script"><link rel="prefetch" href="/assets/js/10.0ad79967.js"><link rel="prefetch" href="/assets/js/11.89901c01.js"><link rel="prefetch" href="/assets/js/12.0215382e.js"><link rel="prefetch" href="/assets/js/13.02a3d9a4.js"><link rel="prefetch" href="/assets/js/14.3b4f13aa.js"><link rel="prefetch" href="/assets/js/15.d1739417.js"><link rel="prefetch" href="/assets/js/16.9620fdd6.js"><link rel="prefetch" href="/assets/js/17.ce95e47e.js"><link rel="prefetch" href="/assets/js/19.e549a00f.js"><link rel="prefetch" href="/assets/js/3.989737ef.js"><link rel="prefetch" href="/assets/js/4.38c01414.js"><link rel="prefetch" href="/assets/js/5.61f8d686.js"><link rel="prefetch" href="/assets/js/6.4db2969a.js"><link rel="prefetch" href="/assets/js/7.ae5c14d4.js"><link rel="prefetch" href="/assets/js/8.f6babcac.js"><link rel="prefetch" href="/assets/js/9.0fecb39f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44fe5b27.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Jiniworks Knowledge Base</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="내부망에-연결된-pc에서-외부망-연결"><a href="#내부망에-연결된-pc에서-외부망-연결" class="header-anchor">#</a> 내부망에 연결된 PC에서 외부망 연결</h1> <blockquote><p><strong>상황 : 내부망에 접속되는 노트북이 한대 있어서 무조건 들어가서 작업해야 하는 경우</strong></p></blockquote> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>제약사항: 내부망에 접속해놓은 노트북의 모바일 핫스팟 기능이 가능해야 한다.<br>
+접근 제어 프로그램에 따라 핫스팟이 켜지는걸 막는 경우가 있을수 있다. 이경우 대략 난감..</p></div> <h3 id="_1-내부망에-연결된-pc의-모바일-핫스팟을-켜고-설정한다-mac-windows-모두-가능-검색할-것"><a href="#_1-내부망에-연결된-pc의-모바일-핫스팟을-켜고-설정한다-mac-windows-모두-가능-검색할-것" class="header-anchor">#</a> 1. 내부망에 연결된 PC의 모바일 핫스팟을 켜고 설정한다.(Mac, Windows 모두 가능.  검색할 것.)</h3> <h3 id="_2-모바일-핫스팟이-꺼지지-않도록-설정한다-전원-설정-모바일-핫스팟-자체-설정-등등"><a href="#_2-모바일-핫스팟이-꺼지지-않도록-설정한다-전원-설정-모바일-핫스팟-자체-설정-등등" class="header-anchor">#</a> 2. 모바일 핫스팟이 꺼지지 않도록 설정한다.(전원 설정, 모바일 핫스팟 자체 설정 등등)</h3> <h3 id="_3-외부망에-연결할-pc를-추가로-한대-투입한다"><a href="#_3-외부망에-연결할-pc를-추가로-한대-투입한다" class="header-anchor">#</a> 3. 외부망에 연결할 PC를 추가로 한대 투입한다.</h3> <h3 id="_4-추가-투입된-pc에-wifi-연결-2개를-확보한다"><a href="#_4-추가-투입된-pc에-wifi-연결-2개를-확보한다" class="header-anchor">#</a> 4. 추가 투입된 PC에 wifi 연결 2개를 확보한다.</h3> <h3 id="_5-연결중-하나를-내부망-pc의-모바일-핫스팟에-연결한다"><a href="#_5-연결중-하나를-내부망-pc의-모바일-핫스팟에-연결한다" class="header-anchor">#</a> 5. 연결중 하나를 내부망 PC의 모바일 핫스팟에 연결한다.</h3> <h3 id="_6-나머지-하나는-포켓파이에-연결한다"><a href="#_6-나머지-하나는-포켓파이에-연결한다" class="header-anchor">#</a> 6. 나머지 하나는 포켓파이에 연결한다.</h3> <br> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>위의 상태로는 내부망과 외부망이 아직 구별되지 않으므로 라우팅 테이블을 잡아줘야 한다.</p></div> <h3 id="cmd창을-관리자-모드로-실행한다"><a href="#cmd창을-관리자-모드로-실행한다" class="header-anchor">#</a> cmd창을 관리자 모드로 실행한다.</h3> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 1. 기존 routing table을 모두 지워준다. 만약 실수 했을 경우 이걸 반복하면 된다.</span>
+$ route -f 
+
+<span class="token comment"># 2. 인터페이스 목록을 확인한다. 이때 확인할 내용은 인터페이스의 번호이다.</span>
+$ route print
+
+<span class="token comment"># 3. 외부망/내부망에 각각 연결된 네트워크의 gateway를 확인한다.</span>
+$ ipconfig /all
+
+<span class="token comment"># 4. 기본적으로 모든 ip가 외부망 인터페이스를 타도록 설정한다.</span>
+$ route <span class="token function">add</span> <span class="token number">0.0</span>.0.0 mask <span class="token number">0.0</span>.0.0 <span class="token punctuation">[</span>외부망 gateway<span class="token punctuation">]</span> <span class="token keyword">if</span> <span class="token punctuation">[</span>외부망 인터페이스 번호<span class="token punctuation">]</span>    
+
+
+<span class="token comment"># 5. 내부망 대역인 경우 내부망 인터페이스를 타도록 설정한다. </span>
+$ route <span class="token function">add</span> <span class="token punctuation">[</span>내부망대역<span class="token punctuation">]</span> mask <span class="token punctuation">[</span>내부망대역 마스크<span class="token punctuation">]</span> <span class="token punctuation">[</span>내부망 gateway<span class="token punctuation">]</span> <span class="token keyword">if</span> <span class="token punctuation">[</span>내부망 인터페이스 번호<span class="token punctuation">]</span>
+</code></pre></div><p>내부망대역과 내부망대역 마스크는 아래와 같이 설정한다.<br></p> <table><tr><th>내부망대역</th> <th>마스크값</th></tr> <tr><td>X.0.0.0</td> <td>255.0.0.0</td></tr> <tr><td>X.X.0.0</td> <td>255.255.0.0</td></tr> <tr><td>X.X.X.0</td> <td>255.255.255.0</td></tr> <tr><td>X.X.X.X</td> <td>255.255.255.255</td></tr></table> <p>보통 대역으로 잡을테니 위의 값중 맞는 값을 찾아 넣는다.</p> <p>위와 같이 설정해서 잘 안되면 route -f로 초기화후 확인후 재진행.</p> <p>잘 된다면 역시 route -f 명령으로 초기화하고 4,5번의 route add 명령에 -p를 붙여서 부팅해도 적용되도록 설정한다.</p> <p>이제 외부망 연결 PC에 팀뷰어를 깔고 쓴다.</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.65a287af.js" defer></script><script src="/assets/js/2.111a4501.js" defer></script><script src="/assets/js/18.bbcd404d.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>openJDK 설치하기 | Jiniworks Knowledge Base</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="JiniWorks Dev.">
+    <meta name="robots" content="noindex">
+    <link rel="preload" href="/assets/css/0.styles.44fe5b27.css" as="style"><link rel="preload" href="/assets/js/app.65a287af.js" as="script"><link rel="preload" href="/assets/js/2.111a4501.js" as="script"><link rel="preload" href="/assets/js/11.89901c01.js" as="script"><link rel="prefetch" href="/assets/js/10.0ad79967.js"><link rel="prefetch" href="/assets/js/12.0215382e.js"><link rel="prefetch" href="/assets/js/13.02a3d9a4.js"><link rel="prefetch" href="/assets/js/14.3b4f13aa.js"><link rel="prefetch" href="/assets/js/15.d1739417.js"><link rel="prefetch" href="/assets/js/16.9620fdd6.js"><link rel="prefetch" href="/assets/js/17.ce95e47e.js"><link rel="prefetch" href="/assets/js/18.bbcd404d.js"><link rel="prefetch" href="/assets/js/19.e549a00f.js"><link rel="prefetch" href="/assets/js/3.989737ef.js"><link rel="prefetch" href="/assets/js/4.38c01414.js"><link rel="prefetch" href="/assets/js/5.61f8d686.js"><link rel="prefetch" href="/assets/js/6.4db2969a.js"><link rel="prefetch" href="/assets/js/7.ae5c14d4.js"><link rel="prefetch" href="/assets/js/8.f6babcac.js"><link rel="prefetch" href="/assets/js/9.0fecb39f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44fe5b27.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Jiniworks Knowledge Base</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>openJDK 설치하기</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/jdk.html#_1-yum-명령어를-이용한-자동설치" class="sidebar-link">1. yum 명령어를 이용한 자동설치</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/jdk.html#_1-1-설치가능한-jdk-확인" class="sidebar-link">1.1 설치가능한 JDK 확인</a></li><li class="sidebar-sub-header"><a href="/guide/jdk.html#_1-2-jdk-1-8-설치" class="sidebar-link">1.2 JDK 1.8 설치</a></li><li class="sidebar-sub-header"><a href="/guide/jdk.html#_1-3-설치-확인" class="sidebar-link">1.3 설치 확인</a></li></ul></li><li><a href="/guide/jdk.html#_2-수동설치" class="sidebar-link">2. 수동설치</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/jdk.html#_2-1-openjdk-다운로드-링크" class="sidebar-link">2.1 openJDK 다운로드 링크</a></li><li class="sidebar-sub-header"><a href="/guide/jdk.html#_2-2-압축풀기-ex-ojdkbuild" class="sidebar-link">2.2 압축풀기( ex:ojdkbuild )</a></li><li class="sidebar-sub-header"><a href="/guide/jdk.html#_2-3-폴더명-변경" class="sidebar-link">2.3 폴더명 변경</a></li><li class="sidebar-sub-header"><a href="/guide/jdk.html#_2-4-환경변수-등록" class="sidebar-link">2.4 환경변수 등록</a></li><li class="sidebar-sub-header"><a href="/guide/jdk.html#_2-5-환경변수-설정-적용-후-확인" class="sidebar-link">2.5 환경변수 설정 적용 후 확인</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="openjdk-설치하기"><a href="#openjdk-설치하기" class="header-anchor">#</a> openJDK 설치하기</h1> <blockquote><p>Oracle jdk 상용화에 따라 open-jdk 를 설치하는 두가지 방법을 진행</p></blockquote> <ul><li>yum 명령어를 이용한 자동 설치 ( root 계정 )</li> <li>open-jdk 를 다운받아 원하는 경로에 설치 ( 사용자 계정 )</li></ul> <h2 id="_1-yum-명령어를-이용한-자동설치"><a href="#_1-yum-명령어를-이용한-자동설치" class="header-anchor">#</a> 1. yum 명령어를 이용한 자동설치</h2> <h3 id="_1-1-설치가능한-jdk-확인"><a href="#_1-1-설치가능한-jdk-확인" class="header-anchor">#</a> 1.1 설치가능한 JDK 확인</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>$ yum list java*jdk-devel
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code>Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.kakao.com
+ * epel: ftp.iij.ad.jp
+ * extras: mirror.kakao.com
+ * updates: mirror.kakao.com
+Available Packages
+java-1.6.0-openjdk.x86_64            <span class="token number">1</span>:1.6.0.41-1.13.13.1.el7_3            base   
+java-1.7.0-openjdk.x86_64            <span class="token number">1</span>:1.7.0.261-2.6.22.2.el7_8            updates
+java-1.8.0-openjdk.i686              <span class="token number">1</span>:1.8.0.262.b10-0.el7_8               updates
+java-1.8.0-openjdk.x86_64            <span class="token number">1</span>:1.8.0.262.b10-0.el7_8               updates
+java-11-openjdk.i686                 <span class="token number">1</span>:11.0.8.10-0.el7_8                   updates
+java-11-openjdk.x86_64               <span class="token number">1</span>:11.0.8.10-0.el7_8                   updates
+java-latest-openjdk.x86_64           <span class="token number">1</span>:14.0.2.12-1.rolling.el7             epel  
+</code></pre></div><h3 id="_1-2-jdk-1-8-설치"><a href="#_1-2-jdk-1-8-설치" class="header-anchor">#</a> 1.2 JDK 1.8 설치</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>$ yum <span class="token function">install</span> java-1.8.0-openjdk.x86_64 
+<span class="token punctuation">..</span><span class="token punctuation">..</span>
+Is this ok <span class="token punctuation">[</span>y/d/N<span class="token punctuation">]</span>: y
+Is this ok <span class="token punctuation">[</span>y/d/N<span class="token punctuation">]</span>: y
+<span class="token punctuation">..</span><span class="token punctuation">..</span>
+
+Complete<span class="token operator">!</span>
+</code></pre></div><h3 id="_1-3-설치-확인"><a href="#_1-3-설치-확인" class="header-anchor">#</a> 1.3 설치 확인</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>$ java -version
+openjdk version <span class="token string">&quot;1.8.0_262&quot;</span>
+OpenJDK Runtime Environment <span class="token punctuation">(</span>build <span class="token number">1.8</span>.0_262-b10<span class="token punctuation">)</span>
+OpenJDK <span class="token number">64</span>-Bit Server VM <span class="token punctuation">(</span>build <span class="token number">25.262</span>-b10, mixed mode<span class="token punctuation">)</span>
+</code></pre></div><h2 id="_2-수동설치"><a href="#_2-수동설치" class="header-anchor">#</a> 2. 수동설치</h2> <h3 id="_2-1-openjdk-다운로드-링크"><a href="#_2-1-openjdk-다운로드-링크" class="header-anchor">#</a> 2.1 openJDK 다운로드 링크</h3> <blockquote><p>아래 두개 링크중 선택하여 다운로드 한 뒤, FTP를 이용해 서버로 업로드</p></blockquote> <ul><li><a href="http://gofile.me/48ukB/jQtEmYv4F" target="_blank" rel="noopener noreferrer">ojdkbuild-1.8-linux-x64.tar<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <ul><li><a href="https://github.com/ojdkbuild/ojdkbuild" target="_blank" rel="noopener noreferrer">참조링크<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li> <li><a href="http://gofile.me/48ukB/wOAxLxCt1" target="_blank" rel="noopener noreferrer">ZuluBuilds-openJDK1.8-linux-x64.tar.gz<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <ul><li><a href="https://www.azul.com/downloads/zulu-community/?version=java-8-lts&amp;os=centos&amp;architecture=x86-64-bit&amp;package=jdk" target="_blank" rel="noopener noreferrer">참조링크<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>Zulu OpenJDK를 설치할 경우 자바 폰트를 불러오지 못해 캡챠기능에 에러가 발생할 수 있습니다.
+<a href="https://support.azul.com/hc/en-us/articles/360034030692-Using-Fonts-with-OpenJDK-Zulu" target="_blank" rel="noopener noreferrer">해당 에러 발생 시 조치<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <h3 id="_2-2-압축풀기-ex-ojdkbuild"><a href="#_2-2-압축풀기-ex-ojdkbuild" class="header-anchor">#</a> 2.2 압축풀기( ex:ojdkbuild )</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">tar</span> -xvf jdk-8u265-ojdkbuild-linux-x64
+</code></pre></div><h3 id="_2-3-폴더명-변경"><a href="#_2-3-폴더명-변경" class="header-anchor">#</a> 2.3 폴더명 변경</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">mv</span> jdk-8u265-ojdkbuild-linux-x64 open-jdk-1.8
+</code></pre></div><h3 id="_2-4-환경변수-등록"><a href="#_2-4-환경변수-등록" class="header-anchor">#</a> 2.4 환경변수 등록</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token builtin class-name">cd</span>        ----- 사용자 홈으로 이동
+$ <span class="token function">ls</span> -al 
+drwx------  <span class="token number">3</span> cms  cms       <span class="token number">4096</span> Sep <span class="token number">14</span> <span class="token number">20</span>:23 <span class="token builtin class-name">.</span>
+drwxr-xr-x. <span class="token number">5</span> root root      <span class="token number">4096</span> Sep <span class="token number">10</span> <span class="token number">14</span>:28 <span class="token punctuation">..</span>
+-rw-------  <span class="token number">1</span> cms  cms       <span class="token number">1850</span> Sep <span class="token number">14</span> <span class="token number">20</span>:05 .bash_history
+-rw-r--r--  <span class="token number">1</span> cms  cms         <span class="token number">18</span> Oct <span class="token number">31</span>  <span class="token number">2018</span> .bash_logout
+-rw-r--r--  <span class="token number">1</span> cms  cms        <span class="token number">332</span> Sep <span class="token number">14</span> <span class="token number">20</span>:03 .bash_profile      <span class="token operator">&lt;</span>-- 변수적용할 파일
+-rw-r--r--  <span class="token number">1</span> cms  cms        <span class="token number">231</span> Oct <span class="token number">31</span>  <span class="token number">2018</span> .bashrc
+
+$ <span class="token function">vi</span> .bash_profile
+
+
+<span class="token comment"># User specific environment and startup programs</span>
+
+<span class="token assign-left variable">JAVA_HOME</span><span class="token operator">=</span>/home/cms/open-jdk-1.8       <span class="token operator">&lt;</span>-- 경로는 환경에 따라 다름
+<span class="token assign-left variable">JRE_HOME</span><span class="token operator">=</span><span class="token variable">$JAVA_HOME</span>/jre
+
+<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token environment constant">$HOME</span>/.local/bin:<span class="token environment constant">$HOME</span>/bin:<span class="token variable">$JAVA_HOME</span>/bin:<span class="token variable">$JRE_HOME</span>/bin
+
+<span class="token builtin class-name">export</span> JAVA_HOME
+<span class="token builtin class-name">export</span> JRE_HOME
+
+<span class="token builtin class-name">export</span> <span class="token environment constant">PATH</span>
+ 
+</code></pre></div><h3 id="_2-5-환경변수-설정-적용-후-확인"><a href="#_2-5-환경변수-설정-적용-후-확인" class="header-anchor">#</a> 2.5 환경변수 설정 적용 후 확인</h3> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token builtin class-name">source</span> .bash_profile
+$ java -version 
+openjdk version <span class="token string">&quot;1.8.0_265&quot;</span>
+OpenJDK Runtime Environment <span class="token punctuation">(</span>build <span class="token number">1.8</span>.0_265-01<span class="token punctuation">)</span>
+OpenJDK <span class="token number">64</span>-Bit Server VM <span class="token punctuation">(</span>build <span class="token number">25.265</span>-b01, mixed mode<span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.65a287af.js" defer></script><script src="/assets/js/2.111a4501.js" defer></script><script src="/assets/js/11.89901c01.js" defer></script>
+  </body>
+</html>

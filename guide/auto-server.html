@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>[서버재부팅시 Tomcat 자동시작] | Jiniworks Knowledge Base</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="JiniWorks Dev.">
+    <meta name="robots" content="noindex">
+    <link rel="preload" href="/assets/css/0.styles.44fe5b27.css" as="style"><link rel="preload" href="/assets/js/app.65a287af.js" as="script"><link rel="preload" href="/assets/js/2.111a4501.js" as="script"><link rel="preload" href="/assets/js/10.0ad79967.js" as="script"><link rel="prefetch" href="/assets/js/11.89901c01.js"><link rel="prefetch" href="/assets/js/12.0215382e.js"><link rel="prefetch" href="/assets/js/13.02a3d9a4.js"><link rel="prefetch" href="/assets/js/14.3b4f13aa.js"><link rel="prefetch" href="/assets/js/15.d1739417.js"><link rel="prefetch" href="/assets/js/16.9620fdd6.js"><link rel="prefetch" href="/assets/js/17.ce95e47e.js"><link rel="prefetch" href="/assets/js/18.bbcd404d.js"><link rel="prefetch" href="/assets/js/19.e549a00f.js"><link rel="prefetch" href="/assets/js/3.989737ef.js"><link rel="prefetch" href="/assets/js/4.38c01414.js"><link rel="prefetch" href="/assets/js/5.61f8d686.js"><link rel="prefetch" href="/assets/js/6.4db2969a.js"><link rel="prefetch" href="/assets/js/7.ae5c14d4.js"><link rel="prefetch" href="/assets/js/8.f6babcac.js"><link rel="prefetch" href="/assets/js/9.0fecb39f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44fe5b27.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Jiniworks Knowledge Base</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" class="nav-link">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>[서버재부팅시 Tomcat 자동시작]</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/auto-server.html#_1-tomcat-service-파일-생성" class="sidebar-link">1. tomcat.service 파일 생성</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/auto-server.html#_2-데몬-재로드" class="sidebar-link">2. 데몬 재로드</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/auto-server.html#_3-시작서비스-등록" class="sidebar-link">3. 시작서비스 등록</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/auto-server.html#_4-테스트-등록된-tomcat은-shutdown-된-상태로" class="sidebar-link">4. 테스트 ( 등록된 Tomcat은 shutdown 된 상태로 )</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/auto-server.html#_5-서버재기동-후-테스트" class="sidebar-link">5. 서버재기동 후 테스트</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="서버재부팅시-tomcat-자동시작"><a href="#서버재부팅시-tomcat-자동시작" class="header-anchor">#</a> [서버재부팅시 Tomcat 자동시작]</h1> <blockquote><p>서버점검 및 정전등의 이유로 서버가 재부팅될 시에 Tomcat 서비스가 자동으로 시작되도록 설정</p></blockquote> <h2 id="_1-tomcat-service-파일-생성"><a href="#_1-tomcat-service-파일-생성" class="header-anchor">#</a> 1. tomcat.service 파일 생성</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>생성 경로 및 서비스명은 동일하게 하지 않아도 된다.
+모든 작업은 root 권한으로 진행한다.</p></div> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token builtin class-name">cd</span> /usr/lib/systemd/system
+$ <span class="token function">vi</span> tomcat.service
+
+<span class="token punctuation">[</span>Unit<span class="token punctuation">]</span>
+<span class="token assign-left variable">Description</span><span class="token operator">=</span>Apache Tomcat <span class="token number">8.5</span>  --  서비스 설명
+<span class="token assign-left variable">After</span><span class="token operator">=</span>network.target syslog.target  -- 등록되어 있는 서비스가 우선 실행되어야 tomcat 서비스가 실행
+
+<span class="token punctuation">[</span>Service<span class="token punctuation">]</span>
+<span class="token assign-left variable">Type</span><span class="token operator">=</span>forking
+<span class="token assign-left variable">User</span><span class="token operator">=</span>webservice  -- tomcat 서비스를 실행할 유저
+<span class="token assign-left variable">Group</span><span class="token operator">=</span>webservice -- tomcat 서비스를 실행할 유저의 그룹 
+
+<span class="token assign-left variable">ExecStart</span><span class="token operator">=</span>/usr/local/tomcat7/bin/startup.sh
+<span class="token assign-left variable">ExecStop</span><span class="token operator">=</span>/usr/local/tomcat7/bin/shutdown.sh
+
+<span class="token punctuation">[</span>Install<span class="token punctuation">]</span>
+<span class="token assign-left variable">WantedBy</span><span class="token operator">=</span>multi-user.target
+</code></pre></div><h2 id="_2-데몬-재로드"><a href="#_2-데몬-재로드" class="header-anchor">#</a> 2. 데몬 재로드</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>$ systemctl daemon-reload
+</code></pre></div><h2 id="_3-시작서비스-등록"><a href="#_3-시작서비스-등록" class="header-anchor">#</a> 3. 시작서비스 등록</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>$ systemctl <span class="token builtin class-name">enable</span> /usr/lib/systemd/system/tomcat.service
+</code></pre></div><h2 id="_4-테스트-등록된-tomcat은-shutdown-된-상태로"><a href="#_4-테스트-등록된-tomcat은-shutdown-된-상태로" class="header-anchor">#</a> 4. 테스트 ( 등록된 Tomcat은 shutdown 된 상태로 )</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>$ systemctl start tomcat
+</code></pre></div><h2 id="_5-서버재기동-후-테스트"><a href="#_5-서버재기동-후-테스트" class="header-anchor">#</a> 5. 서버재기동 후 테스트</h2> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>서버재기동이 가능한 환경에서만!!!<br>
+서버재기동이 가능한 환경에서만!!!<br>
+서버재기동이 가능한 환경에서만!!!<br>
+서버재기동이 가능한 환경에서만!!!<br></p></div> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">sync</span>
+$ <span class="token function">reboot</span>
+
+<span class="token punctuation">..</span> 부팅완료후 <span class="token punctuation">..</span>
+
+$ <span class="token function">ps</span> -ef <span class="token operator">|</span> <span class="token function">grep</span> tomcat 
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.65a287af.js" defer></script><script src="/assets/js/2.111a4501.js" defer></script><script src="/assets/js/10.0ad79967.js" defer></script>
+  </body>
+</html>

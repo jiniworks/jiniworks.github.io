@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>[CentOS7] NFS를 이용한 NAS 설정(Client) | Jiniworks Knowledge Base</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    
+    <meta name="description" content="JiniWorks Dev.">
+    <meta name="robots" content="noindex">
+    <link rel="preload" href="/assets/css/0.styles.44fe5b27.css" as="style"><link rel="preload" href="/assets/js/app.65a287af.js" as="script"><link rel="preload" href="/assets/js/2.111a4501.js" as="script"><link rel="preload" href="/assets/js/12.0215382e.js" as="script"><link rel="prefetch" href="/assets/js/10.0ad79967.js"><link rel="prefetch" href="/assets/js/11.89901c01.js"><link rel="prefetch" href="/assets/js/13.02a3d9a4.js"><link rel="prefetch" href="/assets/js/14.3b4f13aa.js"><link rel="prefetch" href="/assets/js/15.d1739417.js"><link rel="prefetch" href="/assets/js/16.9620fdd6.js"><link rel="prefetch" href="/assets/js/17.ce95e47e.js"><link rel="prefetch" href="/assets/js/18.bbcd404d.js"><link rel="prefetch" href="/assets/js/19.e549a00f.js"><link rel="prefetch" href="/assets/js/3.989737ef.js"><link rel="prefetch" href="/assets/js/4.38c01414.js"><link rel="prefetch" href="/assets/js/5.61f8d686.js"><link rel="prefetch" href="/assets/js/6.4db2969a.js"><link rel="prefetch" href="/assets/js/7.ae5c14d4.js"><link rel="prefetch" href="/assets/js/8.f6babcac.js"><link rel="prefetch" href="/assets/js/9.0fecb39f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.44fe5b27.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Jiniworks Knowledge Base</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="설치" class="dropdown-title"><span class="title">설치</span> <span class="arrow down"></span></button> <button type="button" aria-label="설치" class="mobile-dropdown-title"><span class="title">설치</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/jdk.html" class="nav-link">
+  openJDK
+</a></li><li class="dropdown-item"><!----> <a href="/guide/tomcat.html" class="nav-link">
+  Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache.html" class="nav-link">
+  [자동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache2.html" class="nav-link">
+  [수동]Apache + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/apache-ssl.html" class="nav-link">
+  Apache SSL 설치
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nginx.html" class="nav-link">
+  NginX + Tomcat
+</a></li><li class="dropdown-item"><!----> <a href="/guide/nas.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  NAS 설정
+</a></li><li class="dropdown-item"><!----> <a href="/guide/auto-server.html" class="nav-link">
+  서버재부팅시 Tomcat 자동시작설정
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CMS" class="dropdown-title"><span class="title">CMS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CMS" class="mobile-dropdown-title"><span class="title">CMS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cms/login.html" class="nav-link">
+  로그인 연동 가이드
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DataBase" class="dropdown-title"><span class="title">DataBase</span> <span class="arrow down"></span></button> <button type="button" aria-label="DataBase" class="mobile-dropdown-title"><span class="title">DataBase</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/oracle-cursor.html" class="nav-link">
+  Oracle 프로시저 커서
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="TIP" class="dropdown-title"><span class="title">TIP</span> <span class="arrow down"></span></button> <button type="button" aria-label="TIP" class="mobile-dropdown-title"><span class="title">TIP</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tip/network.html" class="nav-link">
+  내부망에 연결된 PC에서 외부망 연결
+</a></li><li class="dropdown-item"><!----> <a href="/tip/xss.html" class="nav-link">
+  (보안취약점) XSS 공격
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>[CentOS7] NFS를 이용한 NAS 설정(Client)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/nas.html#_1-서버의-공유폴더와-mount-시킬-폴더를-생성" class="sidebar-link">1. 서버의 공유폴더와 mount 시킬 폴더를 생성</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/nas.html#_2-nfs-서버의-접근가능한-ip-공유폴더-확인" class="sidebar-link">2. NFS 서버의 접근가능한 IP/공유폴더 확인</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/nas.html#_3-nfs-서버의-공유폴더와-클라이언트-폴더-마운트" class="sidebar-link">3. NFS 서버의 공유폴더와 클라이언트 폴더 마운트</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/nas.html#_4-설정-확인-이중화구성시" class="sidebar-link">4. 설정 확인 (이중화구성시)</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/guide/nas.html#_5-부팅시-자동-마운트-설정" class="sidebar-link">5. 부팅시 자동 마운트 설정</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="centos7-nfs를-이용한-nas-설정-client"><a href="#centos7-nfs를-이용한-nas-설정-client" class="header-anchor">#</a> [CentOS7] NFS를 이용한 NAS 설정(Client)</h1> <blockquote><p>NAS 서버가 구축된 상태로 Client 설정</p></blockquote> <h2 id="_1-서버의-공유폴더와-mount-시킬-폴더를-생성"><a href="#_1-서버의-공유폴더와-mount-시킬-폴더를-생성" class="header-anchor">#</a> 1. 서버의 공유폴더와 mount 시킬 폴더를 생성</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">mkdir</span> cms
+$ <span class="token builtin class-name">pwd</span>
+/DATA/cms   
+</code></pre></div><h2 id="_2-nfs-서버의-접근가능한-ip-공유폴더-확인"><a href="#_2-nfs-서버의-접근가능한-ip-공유폴더-확인" class="header-anchor">#</a> 2. NFS 서버의 접근가능한 IP/공유폴더 확인</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>$ showmount -e <span class="token number">172.22</span>.101.122
+Export list <span class="token keyword">for</span> <span class="token number">172.22</span>.101.122:
+/data/col1/cms <span class="token number">172.22</span>.101.192
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">showmount 명령어 사용할 수 없을경우 (root 계정)</p> <div class="language-sh extra-class"><pre class="language-sh"><code>$ yum <span class="token function">install</span> showmount
+</code></pre></div></div> <h2 id="_3-nfs-서버의-공유폴더와-클라이언트-폴더-마운트"><a href="#_3-nfs-서버의-공유폴더와-클라이언트-폴더-마운트" class="header-anchor">#</a> 3. NFS 서버의 공유폴더와 클라이언트 폴더 마운트</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">mount</span> -t nfs <span class="token number">172.22</span>.101.122:/data/col1/cms /DATA/cms
+</code></pre></div><h2 id="_4-설정-확인-이중화구성시"><a href="#_4-설정-확인-이중화구성시" class="header-anchor">#</a> 4. 설정 확인 (이중화구성시)</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>$<span class="token punctuation">[</span>cms@SVV-CMSWAS-01 cms<span class="token punctuation">]</span>$ <span class="token function">vi</span> index.html  <span class="token operator">&lt;</span>-- <span class="token number">1</span>번서버에서 파일 생성
+$<span class="token punctuation">[</span>cms@SVV-CMSWAS-01 cms<span class="token punctuation">]</span>$ <span class="token function">ls</span>
+index.html
+</code></pre></div><div class="language-sh extra-class"><pre class="language-sh"><code>$<span class="token punctuation">[</span>cms@SVV-CMSWAS-02 cms<span class="token punctuation">]</span>$ <span class="token function">ls</span>   <span class="token operator">&lt;</span>-- <span class="token number">2</span>번서버에서 동일 파일 확인
+index.html
+</code></pre></div><h2 id="_5-부팅시-자동-마운트-설정"><a href="#_5-부팅시-자동-마운트-설정" class="header-anchor">#</a> 5. 부팅시 자동 마운트 설정</h2> <div class="language-sh extra-class"><pre class="language-sh"><code>$ <span class="token function">vi</span> /etc/fstab
+<span class="token punctuation">..</span>.
+
+<span class="token number">172.22</span>.101.122:/data/col1/cms /DATA/cms nfs hard <span class="token number">0</span> <span class="token number">0</span> 
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.65a287af.js" defer></script><script src="/assets/js/2.111a4501.js" defer></script><script src="/assets/js/12.0215382e.js" defer></script>
+  </body>
+</html>
